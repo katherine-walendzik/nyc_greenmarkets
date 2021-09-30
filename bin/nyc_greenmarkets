@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
 require_relative "../lib/environment"
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
 
-NycGreenmarkets::CLI.new.start
+NycGreenmarkets::CLI.new.call
