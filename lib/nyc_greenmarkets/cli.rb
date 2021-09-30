@@ -12,7 +12,7 @@ class NycGreenmarkets::CLI
         @boroughs = NycGreenmarkets::Borough.all
         #["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
         @boroughs.each.with_index(1) do |borough, index|
-            puts "\n#{index}. #{borough}"
+            puts "\n#{index}. #{borough.name}"
         end
     end
 
