@@ -9,7 +9,8 @@ class NycGreenmarkets::CLI
     def list_boroughs
         puts "\nPlease select the number corresponding to the borough of your choice:"
         #scrape data
-        @boroughs = ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
+        @boroughs = NycGreenmarkets::Borough.all
+        #["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
         @boroughs.each.with_index(1) do |borough, index|
             puts "\n#{index}. #{borough}"
         end
@@ -26,10 +27,8 @@ class NycGreenmarkets::CLI
 
     def list_greenmarkets(chosen_borough)
         borough = @boroughs[chosen_borough - 1]
-        puts "Here are greenmarkets for #{borough}:"
-        #NycGreenmarkest::Greenmarkets.all.each.with_index(1) do |market, index|
-        #    puts "#{index}. #{market}"
-        #end
+        puts "\nGreenmarkets in #{borough}:"
+        end
     end
-    
+
 end
