@@ -1,21 +1,22 @@
 class NycGreenmarkets::CLI
     
     def call
-        puts "Welcome to NYC Greenmarkets!" 
-        list_borough 
+        puts "\nWelcome to NYC Greenmarkets!" 
+        list_boroughs 
     end
 
-    def list_borough
-        puts "Please select the number corresponding to the borough of your choice:"
+    def list_boroughs
+        puts "\nPlease select the number corresponding to the borough of your choice:"
         #scrape data
         @boroughs = ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
-        @boroughs.each.with_index(1) do |month, index|
-            puts "#{index}. #{month}"
+        @boroughs.each.with_index(1) do |borough, index|
+            puts "\n#{index}. #{borough}"
         end
     end
 
-    def get_borough
-    
+    def get_user_borough
+        chosen_borough = gets.strip
+        
     end
 
     def list_greenmarkets(borough)
