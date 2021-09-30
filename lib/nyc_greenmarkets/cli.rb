@@ -3,6 +3,7 @@ class NycGreenmarkets::CLI
     def call
         puts "\nWelcome to NYC Greenmarkets!" 
         list_boroughs 
+        get_user_borough
     end
 
     def list_boroughs
@@ -15,14 +16,20 @@ class NycGreenmarkets::CLI
     end
 
     def get_user_borough
-        chosen_borough = gets.strip
-        
+        chosen_borough = gets.strip.to_i
+        list_greenmarkets(chosen_borough) if valid_input(chosen_borough.to_i, @boroughs)
     end
 
-    def list_greenmarkets(borough)
-        NycGreenmarkest::Greenmarkets.all.each.with_index(1) do |market, index|
-            puts "#{index}. #{market}"
-        end
+    def valid_input(input, data)
+        if input.to_i <= data.length && input.to_i > 0
     end
 
+    def list_greenmarkets(chosen_borough)
+        borough = @boroughs[chosen_borough - 1]
+        puts "Here are greenmarkets for #{borough}:"
+        #NycGreenmarkest::Greenmarkets.all.each.with_index(1) do |market, index|
+        #    puts "#{index}. #{market}"
+        #end
+    end
+    
 end
