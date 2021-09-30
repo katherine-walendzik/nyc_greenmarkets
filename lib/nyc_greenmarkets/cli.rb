@@ -1,6 +1,6 @@
 class NycGreenmarkets::CLI
     
-    def start
+    def call
       puts "Welcome to NYC Greenmarkets!"  
       puts "Please select the number corresponding to the borough of your choice:"
       #list boroughs as numbered list
