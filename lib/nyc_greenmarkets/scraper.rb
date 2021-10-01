@@ -1,18 +1,17 @@
 class NycGreenmarkets::Scraper
 
     def self.scrape_boroughs
-        doc = Nokogiri::HTML(open("https://www.thesill.com/products"))
-        #plant_description = doc.css("p").text
+        doc = Nokogiri::HTML(open("https://top100.winespectator.com/lists/"))
+        #wine_name_and_vintage = doc.css("div.table-name span.wineName")[0].text
+        #wine_score = doc.css("td.score")[0].text
+        #wine_price = doc.css("td.price")[0].text
+        #wine_full_description = doc.css("div.tabel-note")[0].text
         binding.pry
     end
 
-    def self.scrape_greenmarkets
+    def self.scrape_greenmarketsq
+
     end
 
-    #doc = Nokogiri::HTML(open("https://www.thesill.com/collections/live-plants"))
-    #plant_name = doc.css("h3").text
-    #plant_price = doc.css("div.price").text
-
-    #doc = Nokogiri::HTML(open("https://www.thesill.com/products"))
-    #plant_description = doc.css("p").text
+   
 end
