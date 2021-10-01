@@ -2,8 +2,7 @@ require 'nokogiri'
 require 'pry'
 require 'open-uri'
 
-require_relative "nyc_greenmarkets/version.rb"
-require_relative "nyc_greenmarkets/cli.rb"
-require_relative "nyc_greenmarkets/scraper.rb"
-require_relative "nyc_greenmarkets/borough.rb"
-require_relative "nyc_greenmarkets/greenmarkets.rb"
+require_relative "top_wines/version.rb"
+require_relative "top_wines/cli.rb"
+require_relative "top_wines/scraper.rb"
+require_relative "top_wines/wines.rb"

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/nyc_greenmarkets/version"
+require_relative "lib/top_wines/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "nyc_greenmarkets"
-  spec.version       = NycGreenmarkets::VERSION
+  spec.name          = "top_wines"
+  spec.version       = TopWines::VERSION
   spec.authors       = ["Katherine Walendzik"]
   spec.email         = ["katanwal@icloud.com"]
 

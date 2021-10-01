@@ -5,4 +5,4 @@ require 'pry'
 require 'nokogiri'
 require 'open-uri'
 
-NycGreenmarkets::CLI.new.call
+TopWines::CLI.new.call

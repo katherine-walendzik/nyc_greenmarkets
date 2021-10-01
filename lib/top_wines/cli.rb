@@ -1,4 +1,4 @@
-class NycGreenmarkets::CLI
+class TopWines::CLI
     
     def call
         puts "\nWelcome to NYC Greenmarkets!" 
