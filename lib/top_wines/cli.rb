@@ -1,15 +1,14 @@
 class TopWines::CLI
     
     def call
-        puts "\nWelcome to NYC Greenmarkets!" 
-        list_boroughs 
-        get_user_borough
+        puts "\nWelcome to Wine Spectator's Top 100 Wines of 2020!" 
+        start
     end
 
-    def list_boroughs
-        puts "\nPlease select the number corresponding to the borough of your choice:"
+    def start
+        puts "\nPlease select the group of wines you would like to see: 1-20, 21-40, 41-60, 61-80, 81-100"
         #scrape data
-        @boroughs = NycGreenmarkets::Borough.all
+        @boroughs = TopWines::Borough.all
         #["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
         @boroughs.each.with_index(1) do |borough, index|
             puts "\n#{index}. #{borough.name}"
