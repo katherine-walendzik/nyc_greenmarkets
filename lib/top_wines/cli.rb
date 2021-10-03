@@ -13,7 +13,6 @@ class TopWines::CLI
     def get_user_input
         chosen_group = gets.strip.to_i
         list_wines(chosen_group) if valid_input(chosen_group.to_i, @group)
-        #do i want a Group class?
     end
 
     def valid_input(input, data)

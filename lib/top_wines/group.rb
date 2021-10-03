@@ -1,0 +1,3 @@
+class TopWines::Group
+
+end

@@ -1,3 +1,0 @@
-class TopWines::Groups
-
-end
