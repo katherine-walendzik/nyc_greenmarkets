@@ -1,3 +1,3 @@
-class NycGreenmarkets::Greenmarkets
+class TopWines::Wines
 
 end

@@ -1,15 +1,13 @@
-# NycGreenmarkets
+# TopWines
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nyc_greenmarkets`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Wine Spectator's Top 100 Wines of 2020! Each year, Wine Spectator editors survey the wines reviewed over the previous 12 months and select their Top 100, based on quality, value, availability and excitement. This annual list honors successful wineries, regions, and vintages around the world. Uncork the details of these excellent vinos with the Top Wines CLI!
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nyc_greenmarkets'
+gem 'top_wines'
 ```
 
 And then execute:
@@ -18,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install nyc_greenmarkets
+    $ gem install top_wines
 
 ## Usage
 
@@ -32,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/nyc_greenmarkets. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/<github username>/nyc_greenmarkets/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/top_wines. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/<github username>/top_wines/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -40,4 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the NycGreenmarkets project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/nyc_greenmarkets/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the NycGreenmarkets project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/top_wines/blob/master/CODE_OF_CONDUCT.md).
