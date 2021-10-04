@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nyc_greenmarkets (0.1.0)
+    top_wines (0.1.0)
       nokogiri
 
 GEM
@@ -36,10 +36,10 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
-  nyc_greenmarkets!
   pry
   rake (~> 13.0)
   rspec (~> 3.0)
+  top_wines!
 
 BUNDLED WITH
    2.2.26

@@ -10,19 +10,14 @@ class TopWines::CLI
         #get user input
     end
 
-    def get_user_input
-        chosen_group = gets.strip.to_i
-        list_wines(chosen_group) if valid_input(chosen_group.to_i, @group)
-    end
+    #def get_user_input
+    #    chosen_group = gets.strip.to_i
+    #    list_wines(chosen_group) if valid_input(chosen_group.to_i, @group)
+    #end
 
-    def valid_input(input, data)
-        if input.to_i <= data.length && input.to_i > 0
-    end
-
-    def list_wines(chosen_group)
-        group = @group[chosen_group - 1]
-        puts "\nWines ranked #{group}:"
-        end
-    end
+    #def list_wines(chosen_group)
+    #    puts "\nWines ranked #{group}:"
+    #    end
+    #end
 
 end

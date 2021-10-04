@@ -6,3 +6,16 @@ class TopWines::Scraper
     end
 
 end
+
+
+    #wine_name_and_vintage = doc.css("div.table-name span.wineName")[0].text
+    #wine_rank = doc.css("td.rank")[0].text
+    #winery_name = doc.css("span.sort-text")[0].text
+    #wine_name = doc.css("div.table-name span.wineName")[0].children[1].text
+        #(CHANGE WINE ARRAY LOCATION, BUT CHILD STAYS 1)
+    #wine_vintage = doc.css("td.vintage")[0].text
+    #wine_score = doc.css("td.score")[0].text
+    #wine_price = doc.css("td.price")[0].text
+    #wine_full_description = doc.css("div.tabel-note")[0].text
+
+    
