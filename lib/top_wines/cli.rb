@@ -2,10 +2,17 @@ class TopWines::CLI
     
     def call
         puts "\nWelcome to Wine Spectator's Top 100 Wines of 2020!" 
-        start
-        get_user_input
-        list_wines
+        #start
+        #get_user_input
+        #list_wines
         TopWines::Scraper.scrape_wines
+        list_wines
+    end
+
+    def list_wines
+        TopWines::Wine.all.each.with_index(1) do |wine, i|
+            puts "#{i}. #{wine.winery} #{wine.name}"
+        end
     end
 
     def start

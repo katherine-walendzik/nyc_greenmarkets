@@ -14,8 +14,8 @@ class TopWines::Scraper
             price: wine_block.css("td.price").text,
             full_description: wine_block.css("div.tabel-note").children[0].text.strip.chomp(' —')
         }
-        wine = Wine.new(attributes)
-        binding.pry
+        wine = TopWines::Wine.new(attributes)
+
     end
 
 end
