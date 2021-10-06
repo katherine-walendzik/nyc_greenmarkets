@@ -3,25 +3,20 @@ class TopWines::Wine
 
     @@all = []
 
-    def initialize(att_hash)
-        #@rank = att_hash[:rank]
-        #@winery = att_hash[:winery]
-        #@name = att_hash[:name]
-        #@vintage = att_hash[:vintage]
-        #@score = att_hash[:score]
-        #@price = att_hash[:price]
-        #@full_description = att_hash[:full_description]
+    def initialize
+        @rank = rank
+        @winery = winery
+        @name = name
+        @vintage = vintage
+        @score = score
+        @price = price
+        @full_description = full_description
 
-        att_hash.each do |key, value|
-            self.send("#{key}=", value)
+        TopWines::Wine.all.each.with_index(1) do |wine, index|
+            puts "#{index}. #{wine.winery} #{wine.name}"
         end
 
-        self.save
-    end
-
-    def save
         @@all << self
-        self
     end
 
     def self.all

@@ -2,20 +2,30 @@ class TopWines::Scraper
 # TopWines::Scraper.scrape_wines
     def self.scrape_wines
         doc = Nokogiri::HTML(open("https://top100.winespectator.com/lists/"))
-        wine_block = doc.css("tr td")
+        wine_block = doc.css("tbody tr")
 
         wine_block.each do |block|
-            attributes = {
-            rank: wine_block.css(".rank").text,
-            winery: wine_block.css("span.sort-text").text,
-            name: wine_block.css("div.table-name span.wineName").children[1].text,
-            vintage: wine_block.css("td.vintage").text,
-            score: wine_block.css("td.score").text,
-            price: wine_block.css("td.price").text,
-            full_description: wine_block.css("div.tabel-note").children[0].text.strip.chomp(' —')
-        }
-        wine = TopWines::Wine.new(attributes)
+            wine = TopWines::Wine.new
+            wine.rank = block.css(".rank").text
+            wine.winery = block.css("span.sort-text").text
+            #wine.name = block.css("div.table-name span.wineName").children[1].text.strip
+            wine.vintage = block.css(".vintage").text
+            wine.score = block.css(".score").text
+            wine.price = block.css(".price").text
+            #wine.full_description = block.css("div.tabel-note").children[0].text.strip.chomp(' —')
 
+        #wine_block.each do |block|
+        #    attributes = {
+        #    rank: wine_block.css(".rank").text,
+        #    winery: wine_block.css("span.sort-text").text,
+        #    name: wine_block.css("div.table-name span.wineName").children[1].text.strip,
+        #    vintage: wine_block.css(".vintage").text,
+        #    score: wine_block.css(".score").text,
+        #    price: wine_block.css(".price").text,
+        #    full_description: wine_block.css("div.tabel-note").children[0].text.strip.chomp(' —')
+        #}
+        #wine = TopWines::Wine.new(attributes)
+        #binding.pry
     end
 
 end
