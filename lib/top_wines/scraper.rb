@@ -7,27 +7,17 @@ class TopWines::Scraper
         wine_block.each do |block|
             wine = TopWines::Wine.new
             wine.rank = block.css(".rank").text
-            wine.winery = block.css("span.sort-text").text
+            wine.winery = block.css("span.wineName").text
+            #block.css("span.sort-text").text
             #wine.name = block.css("div.table-name span.wineName").children[1].text.strip
             wine.vintage = block.css(".vintage").text
             wine.score = block.css(".score").text
             wine.price = block.css(".price").text
             #wine.full_description = block.css("div.tabel-note").children[0].text.strip.chomp(' —')
 
-        #wine_block.each do |block|
-        #    attributes = {
-        #    rank: wine_block.css(".rank").text,
-        #    winery: wine_block.css("span.sort-text").text,
-        #    name: wine_block.css("div.table-name span.wineName").children[1].text.strip,
-        #    vintage: wine_block.css(".vintage").text,
-        #    score: wine_block.css(".score").text,
-        #    price: wine_block.css(".price").text,
-        #    full_description: wine_block.css("div.tabel-note").children[0].text.strip.chomp(' —')
-        #}
-        #wine = TopWines::Wine.new(attributes)
-        #binding.pry
+        
     end
-
+    #binding.pry
 end
 
     #wine_block = doc.css("tr td").text

@@ -12,10 +12,6 @@ class TopWines::Wine
         @price = price
         @full_description = full_description
 
-        TopWines::Wine.all.each.with_index(1) do |wine, index|
-            puts "#{index}. #{wine.winery} #{wine.name}"
-        end
-
         @@all << self
     end
 
