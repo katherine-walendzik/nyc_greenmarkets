@@ -4,5 +4,6 @@ require_relative "../lib/environment"
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
 
 TopWines::CLI.new.call
