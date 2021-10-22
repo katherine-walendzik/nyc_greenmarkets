@@ -3,7 +3,7 @@ class TopWines::Wine
 
     @@all = []
 
-    def initialize
+    def initialize(rank = nil, winery = nil, name = nil, vintage = nil, score = nil, price = nil, full_description = nil)
         @rank = rank
         @winery = winery
         @name = name
@@ -11,12 +11,15 @@ class TopWines::Wine
         @score = score
         @price = price
         @full_description = full_description
-
         @@all << self
     end
 
     def self.all
         @@all
+    end
+
+    def self.find(id)
+        self.all[id-1]
     end
 
 end
