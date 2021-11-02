@@ -21,6 +21,13 @@ class TopWines::CLI
         next_move
     end
 
+    def print_wines(from_number)
+        puts "\nWINES RANKED #{from_number} - #{from_number+19}".black.on_light_white
+        TopWines::Wine.all[from_number-1, 20].each.with_index(from_number) do |wine, index|
+            puts "\n#{index}. #{wine.winery} - #{wine.name}"
+        end
+    end
+
     def select_wine
         puts "\nPlease select the corresponding number of the wine of your choice for more details.".black.on_light_white
         input = gets.strip
@@ -28,6 +35,17 @@ class TopWines::CLI
         wine = TopWines::Wine.find(input.to_i)
 
         print_wine(wine) 
+    end
+
+    def print_wine(wine)
+        puts "\n#{wine.rank}. #{wine.winery.upcase} - #{wine.name.upcase}".black.on_light_white
+        puts "RANK: #{wine.rank}"
+        puts "WINERY: #{wine.winery}"
+        puts "NAME: #{wine.name}"
+        puts "VINTAGE: #{wine.vintage}"
+        puts "SCORE: #{wine.score}"
+        puts "PRICE: #{wine.price}"
+        puts "FULL DESCRIPTION: #{wine.full_description}"
     end
 
     def next_move
@@ -46,24 +64,6 @@ class TopWines::CLI
             puts "\nI'm not sure what you mean. Keep exploring wines, or type 'exit' to leave.".black.on_light_white
             next_move
         end
-    end
-
-    def print_wines(from_number)
-        puts "\nWINES RANKED #{from_number} - #{from_number+19}".black.on_light_white
-        TopWines::Wine.all[from_number-1, 20].each.with_index(from_number) do |wine, index|
-            puts "\n#{index}. #{wine.winery} - #{wine.name}"
-        end
-    end
-
-    def print_wine(wine)
-        puts "\n#{wine.rank}. #{wine.winery.upcase} - #{wine.name.upcase}".black.on_light_white
-        puts "RANK: #{wine.rank}"
-        puts "WINERY: #{wine.winery}"
-        puts "NAME: #{wine.name}"
-        puts "VINTAGE: #{wine.vintage}"
-        puts "SCORE: #{wine.score}"
-        puts "PRICE: #{wine.price}"
-        puts "FULL DESCRIPTION: #{wine.full_description}"
     end
 
 end
